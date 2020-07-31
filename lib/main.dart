@@ -1,4 +1,8 @@
+//import 'dart:html';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:news_flash/views/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,33 +10,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: Theme.of(context).copyWith(
         appBarTheme: AppBarTheme(
-          color: Colors.black,
+          color: //Hexcolor('687477'),
+          Colors.white,
           brightness: Brightness.dark,
-          elevation: 20,
+          elevation: 15,
           //textTheme: Theme.of(context).textTheme,
           iconTheme: Theme.of(context).iconTheme,
         ),
       ),
-      home: SafeArea(
-        child: Scaffold(
-          backgroundColor: Colors.grey[900],
-          appBar: AppBar(
-            leading: Icon(Icons.local_library,color: Colors.white,),
-            title: Text(
-              'NewsFeed',
-              style: TextStyle(
-                fontFamily: 'Pacifico',
-                fontWeight: FontWeight.normal,
-                fontSize: 30,
-                backgroundColor: Colors.transparent,
-              ),
-            ),
-            centerTitle: true,
-          ),
-        ),
-      ),
+      home: Home(),
     );
   }
 }
+

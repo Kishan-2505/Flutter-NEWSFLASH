@@ -7,6 +7,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/newspaper" />
+            android:src="@drawable/logo_news"/>
     </item>
 </layer-list>
